@@ -3,7 +3,7 @@ syntax match percentEncoding_url '\v\%\x\x' containedin=ALL
 syntax match scheme_url '\v^[^:]+'
 syntax match delimiter_url '\v[/.:]' containedin=ALL
 syntax match domain_url '\v(\/\/)@<=[^:/]+' contains=top_domain_url,hoge_domain_url
-    syntax match hoge_domain_url '\v(\/\/)@<=[^.]+' contained " floorpのアドレスバーのURLのドメインのハイライトに似せる
+    syntax match hoge_domain_url '\v(\/\/)@<=[^.]+' contained " floorpのアドレスバーのドメインのハイライトに似せる
     syntax match top_domain_url '\v[^./]+\/@=' contained
 syntax match port_url '\v:@<=\d+\/@='
 syntax match path_url '\v(\/\/[^/]+)@<=\/[^#?]+'

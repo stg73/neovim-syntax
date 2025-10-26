@@ -1,3 +1,4 @@
+-- very magicのハイライト
 vim.cmd([=[
 syntax match literal_regex '\v.'
 syntax match ignored_regex '\v\/'
@@ -17,7 +18,7 @@ syntax match characterClasses_regex '\v(\\_)?\[([^\\\]]|\\.)+\]' contains=litera
         syntax match negation_characterClasses_regex '\v\[@<=\^' contained
 ]=])
 
--- "\V.+"でも正しくハイライトできるように
+-- very nomagicのハイライト
 vim.cmd([[
 syntax match Vregex '\v\\V.+' contains=ALLBUT,malti_regex,patternAtom_regex,delimiter_regex,matomeru_regex,characterClasses_regex,number_regex,negation_characterClasses_regex,literal_characterClasses_regex
 syntax match malti_regex '\v\\([*+?=]|\{.{-}\}|\@[><]?[!=]?)' contained containedin=Vregex contains=number_regex,delimiter_malti_regex
