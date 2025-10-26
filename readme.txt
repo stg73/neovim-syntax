@@ -23,8 +23,9 @@ skk-users
 skk-specialized
     特定分野に関するSKK辞書
     候補の分類を取得し それが含まれない候補をエラーにする
+    "b:skk_bunnrui"に候補の分類を代入する これにモジュール"skk_commands"の関数"annotate"を組み合わせると 分類注釈の追加が楽にできる
+
     luaのモジュール"skk"が必要
-    更にモジュール"skk_commands"の関数"annotate"を使うと 分類注釈の追加が楽にできる
     モジュールの場所は"https://github.com/stg73/lua-modules"
 
 url
