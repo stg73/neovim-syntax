@@ -20,7 +20,7 @@ syntax match characterClasses_regex '\v(\\_)?\[([^\\\]]|\\.)+\]' contains=litera
 
 -- very nomagicのハイライト
 vim.cmd([[
-syntax match Vregex '\v\\V.+' contains=ALLBUT,malti_regex,patternAtom_regex,delimiter_regex,matomeru_regex,characterClasses_regex,number_regex,negation_characterClasses_regex,literal_characterClasses_regex
+syntax match Vregex '\v\\V.+' contains=ALLBUT,malti_regex,patternAtom_regex,delimiter_regex,matomeru_regex,characterClasses_regex,number_regex,negation_characterClasses_regex,literal_characterClasses_regex,hanni_characterClasses_regex,delimiter_hanni_characterClasses_regex
 syntax match malti_regex '\v\\([*+?=]|\{.{-}\}|\@[><]?[!=]?)' contained containedin=Vregex contains=number_regex,delimiter_malti_regex
 syntax match patternAtom_regex "\v\\_?([$^.]|[><]|\%[<>]?([$^V#]|'\l|(\.|\d)+[lcv]))|\\z[se]" contained containedin=Vregex contains=number_regex
 syntax match delimiter_regex '\v\\[&|]' contained containedin=Vregex
