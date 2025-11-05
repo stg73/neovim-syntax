@@ -11,6 +11,13 @@ bnf
 regex
     vimの正規表現
     "very magic"もしくは"very nomagic"のみ正しくハイライトできる
+    主に検索cmdwin用
+    vim.api.nvim_create_autocmd('CmdWinEnter',{
+        pattern = {"/","?"},
+        callback = function()
+            vim.bo.filetype = "regex"
+        end,
+    })
 
 skk
     ユーザ辞書以外のSKK辞書
